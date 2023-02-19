@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kids {
+            color: rgb(240, 80, 0);
+            font-weight: bold;
+        }
+
+        .main-place {
+            color: rgb(14, 174, 19);
+            font-weight: bold;
+        }
+
+        .villain {
+            color: rgb(141, 11, 124);
+            font-weight: bold;
+        }
+
+        .hero {
+            color: rgb(0, 34, 255);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        const mainPlace = "Херсон";
+
+        const villain = "Бармалейка"
+
+        const kidsNames = ["Петро", "Сюзанна", "Едік", "Люда"]
+        const kidsNamesComa = kidsNames.map(kidsName => " " + kidsName)
+
+        const countKids = kidsNames.length
+
+        const hero = {
+            animal: "Жираф",
+            name: "Василь"
+        };
+
+
+        document.body.innerHTML = `
+    <h1>Лев, чаклунка і платтяна шафа (1950)</h1>
+    <p>Через бомбардування Лондона ${countKids} дітей Певенсі (<span class="kids">${kidsNamesComa}</span>) відправляють до друга сім’ї,
+        професора Дігорі Керка.
+    </p>
+    <p>Під час гри в хованки <span class="kids">${kidsNames[3]}</span> переховується в шафі, через який потрапляє в <span class="main-place">${mainPlace}</span>, де знайомиться з фавном Тумнусом.
+        Він розповідає їй, що <span class="main-place">${mainPlace}</span> знаходиться під владою <span class="villain">${villain}</span>, що захопила <span class="main-place">${mainPlace}</span>. Вона проголосила себе
+        королевою, через яку в <span class="main-place">${mainPlace}</span> прийшла вічна зима і ніколи не буває Різдва. Повернувшись до братів і сестри, <span class="kids">${kidsNames[3]}</span>
+        розповідає про свою пригоду, однак вони їй не вірять. Пізніше вона вдруге потрапляє в <span class="main-place">${mainPlace}</span>. За нею слідом іде
+        <span class="kids">${kidsNames[2]}</span>. Він зустрічає <span class="villain">${villain}</span>, яка пригощає його зачарованим рахат-лукумом і тим самим підпорядковує
+        хлопчика собі. Вона наказує <span class="kids">${kidsNames[2]}</span> привести всіх чотирьох дітей до неї в замок.
+    </p>
+    <p>
+        Пізніше всі четверо дітей потрапляють в <span class="main-place">${mainPlace}</span> і виявляють, що Тумнуса забрали слуги <span class="villain">${villain}</span> (як
+        з’ясувалося, <span class="kids">${kidsNames[2]}</span> повторив <span class="villain">${villain}</span> розповідь <span class="kids">${kidsNames[3]}</span> і тим самим видав фавна). Дітей зустрічає містер Бобр і
+        розповідає про те, що <span class="hero">${hero.name}</span> вже в дорозі, а значить, починає збуватися давнє пророцтво про те, що прийде <span class="hero">${hero.name}</span>,
+        скінчиться Довга зима і чотири людини стануть правителями <span class="main-place">${mainPlace}</span>. Під час розповіді <span class="kids">${kidsNames[2]}</span> збігає і прямує до
+        замку <span class="villain">${villain}</span>. <span class="villain">${villain}</span> злиться на ${kidsNames[2]}, оскільки той не привів їй усіх дітей Певенсі і заковує його.
+        А тим часом <span class="kids">${kidsNames[0]}, ${kidsNames[1]}, ${kidsNames[3]}</span> і Бобри відправляються до <span class="hero">${hero.name}</span>. По дорозі вони зустрічають Батька Різдва, який
+        вручає їм подарунки: <span class="kids">${kidsNames[0]}</span> — меч і щит, <span class="kids">${kidsNames[1]}</span> лук, стріли і ріг, <span class="kids">${kidsNames[3]}</span> — кинджал і чарівний сік вогнецвіту,
+        одна крапля якого виліковує будь-які рани. Зустрівшись з Великим <span class="hero">${hero.animal}</span>, діти просять його допомогти врятувати
+        <span class="kids">${kidsNames[2]}</span>, що і відбувається. <span class="kids">${kidsNames[2]}</span> ж розуміє наскільки він був не правий. Але все ж він став зрадником і тепер
+        належить королеві. <span class="hero">${hero.name}</span> здійснює обмін: він залишається в руках <span class="villain">${villain}</span>, а <span class="kids">${kidsNames[2]}</span> відпускають. Вночі
+        королева вбиває <span class="hero">${hero.name}</span>. Потім <span class="hero">${hero.name}</span> воскресає. Наступного дня відбувається бій за <span class="main-place">${mainPlace}</span>.
+    </p>
+    <p>
+        <span class="kids">${kidsNames[0]}</span> допомагає перемогти <span class="villain">${villain}</span>. Після перемоги його проголошують <span class="kids">${kidsNames[0]}</span> Прекрасним, верховним королем
+        в Кер Паравале, він править <span class="main-place">${mainPlace}</span> 15 років разом з сестрами і братом: <span class="kids">${kidsNames[1]}</span> Великодушна, <span class="kids">${kidsNames[3]}</span> Відважна і
+        <span class="kids">${kidsNames[2]}</span> Справедливий. Але якось раз під час полювання на білого оленя вони потрапляють назад в Англію.
+        Виявляється, що там не минуло й хвилини.
+    </p>
+    `
+    </script>
+</body>
+
+</html>
